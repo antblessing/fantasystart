@@ -15,3 +15,9 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.jumbotron
+{
+  background-image: url(http://lifestylefrisco.s3.amazonaws.com/wp-content/uploads/2013/08/football-on-a-field-2000.jpg);
+  background-size: cover;
+}
