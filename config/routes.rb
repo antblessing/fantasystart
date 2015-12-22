@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :matchups
   get 'users/show'
 
   devise_for :users
