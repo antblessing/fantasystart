@@ -34,3 +34,5 @@ source 'https://rubygems.org'
  gem 'devise'
 
  gem 'figaro'
+
+ gem 'httparty'

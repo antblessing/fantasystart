@@ -16,6 +16,8 @@
           <li><%= link_to "Home", welcome_index_path %></li>
           <li><%= link_to "Leaderboard", welcome_about_path %></li>
           <li><%= link_to "Profile", users_show_path %></li>
+          <li><%= link_to "New Matchup", new_matchup_path %></li>
+          <li><%= link_to "Vote", matchups_path %></li>
           <li><%= link_to "Edit Info", edit_user_registration_path, :class => 'navbar-link' %></li>
           <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link' %></li>
       <% else %>
