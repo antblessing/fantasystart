@@ -23,4 +23,11 @@ class ProFootballApiWrapper
   def get_player_stats(options)
     response = make_request("/players", options)
   end
+
+  def get_json
+    api = ProFootballApiWrapper.new
+    @players = api.get_player_stats({stats_type: 'offense', player_name: 'a.foster'})
+    response = @players.parsed_response
+    json_response = eval(response)
+  end
 end

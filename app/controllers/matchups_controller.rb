@@ -13,6 +13,13 @@ class MatchupsController < ApplicationController
   # GET /matchups/new
   def new
     @matchup = Matchup.new
+    api = ProFootballApiWrapper.new
+    @players = api.get_player_stats({stats_type: 'offense', player_name: 'a.foster'})
+    @player = @players.parsed_response
+    json_response = eval(@player)
+    @stat = json_response[:'2009082255'][:'00-0026796'][:'rushing']
+    @player_name = json_response[:'2009082255'][:'00-0026796'][:'rushing'][:'name']
+    @player_targets = json_response[:'2009082255'][:'00-0026796'][:'rushing'][:'attempts']
   end
 
   # GET /matchups/1/edit

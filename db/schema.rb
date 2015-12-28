@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151222184635) do
+ActiveRecord::Schema.define(version: 20151224210304) do
 
   create_table "matchups", force: :cascade do |t|
     t.boolean  "result"
@@ -20,6 +20,28 @@ ActiveRecord::Schema.define(version: 20151222184635) do
   end
 
   create_table "players", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "rushing_tds"
+    t.integer  "rushing_yards"
+    t.string   "image_url"
+    t.integer  "receiving_tds"
+    t.integer  "receiving_yards"
+    t.integer  "team_id"
+    t.integer  "position_id"
+  end
+
+  add_index "players", ["position_id"], name: "index_players_on_position_id"
+  add_index "players", ["team_id"], name: "index_players_on_team_id"
+
+  create_table "positions", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "teams", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

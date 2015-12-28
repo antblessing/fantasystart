@@ -36,3 +36,9 @@ source 'https://rubygems.org'
  gem 'figaro'
 
  gem 'httparty'
+
+ gem 'annotate'
+
+ gem 'faker'
+
+ gem 'pry'
