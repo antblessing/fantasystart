@@ -27,8 +27,7 @@
     <div class="thumbnail">
       <img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/12497.png&w=350&h=254" alt="...">
       <div class="caption">
-        <h3>Player name: <%= @player_name %></h3>
-        <p>Targets per game: <%= @player_targets %></p>  
+        <h3>Player name: A.Foster <%= @player_name %></h3>
       </div>
     </div>
   </div>
@@ -38,9 +37,12 @@
       <div class="caption">
         <h3>Player name: M.Lynch</h3>
         <p>Targets per game:</p>
-        <p>Opponent:</p>
       </div>
     </div>
   </div>
 </div>
 <%= link_to 'Back', matchups_path %>
+<br />
+<br />
+
+<%= @players %>

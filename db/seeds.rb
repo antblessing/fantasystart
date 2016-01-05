@@ -8,4 +8,14 @@ require 'faker'
         )
     end
 
-puts "#{User.count} users created!"    
+    api = FantasyFootballNerdApiWrapper.new
+    @test = api.get_players
+    @test.each do |x|
+      Player.create(
+        name: x["displayName"],
+        team: x["team"],
+        position: x["position"]
+      )
+    end
+puts "#{User.count} users created!"
+puts "#{Player.count} players created!"

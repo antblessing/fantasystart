@@ -8,22 +8,14 @@
         <th>Last Active</th>
       </tr>
     </thead>
+    <% @users.each do |user| %>
     <tbody>
       <tr>
-        <td>pineapple@gmail.com</td>
-        <td>98%</td>
-        <td>10 hrs ago</td>
+        <td><%= user.email %></td>
+        <td><%= rand(60..100) %>%</td>
+        <td><%= rand(1..15) %> hrs ago</td>
       </tr>
-      <tr>
-        <td>orange@gmail.com</td>
-        <td>90%</td>
-        <td>10 mins ago</td>
-      </tr>
-      <tr>
-        <td>banana@gmail.com</td>
-        <td>50%</td>
-        <td>8 years ago</td>
-      </tr>
+    <% end %>
     </tbody>
   </table>
 </div>

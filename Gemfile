@@ -42,3 +42,5 @@ source 'https://rubygems.org'
  gem 'faker'
 
  gem 'pry'
+
+ gem 'fantasy_football_nerd'

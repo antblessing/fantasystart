@@ -3,5 +3,7 @@ class WelcomeController < ApplicationController
   end
 
   def about
+    @user = current_user.email
+    @users = User.all
   end
 end

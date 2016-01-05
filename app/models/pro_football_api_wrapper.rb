@@ -25,9 +25,9 @@ class ProFootballApiWrapper
   end
 
   def get_json
-    api = ProFootballApiWrapper.new
-    @players = api.get_player_stats({stats_type: 'offense', player_name: 'a.foster'})
-    response = @players.parsed_response
-    json_response = eval(response)
+  #  api = ProFootballApiWrapper.new
+  #  @players = api.get_player_stats({stats_type: 'offense', player_name: 'a.foster'})
+  #  response = @players.parsed_response
+  #  json_response = eval(response)
   end
 end
