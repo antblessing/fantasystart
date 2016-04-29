@@ -1,3 +1,9 @@
-<%= @players.each do |x| %>
+<h1>All Players</h1>
+
+<% @players.each do |x| %>
+<p>
   <%= x.name %>
+  <%= x.team %>
+  <%= x.position %>
+</p>
 <% end %>

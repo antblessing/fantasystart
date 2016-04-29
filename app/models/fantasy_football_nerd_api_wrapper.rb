@@ -31,4 +31,5 @@ class FantasyFootballNerdApiWrapper
   "weight": "240",
   "dob": "1983-06-15",
   "college": "Oregon State"
-}end
+}
+end

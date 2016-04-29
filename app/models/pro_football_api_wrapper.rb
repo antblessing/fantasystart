@@ -18,7 +18,7 @@ class ProFootballApiWrapper
     make_request("/schedule")
   end
 
-  #  api.get_player_stats({stats_type: 'offense', team: 'NE'})
+  # api.get_player_stats({stats_type: 'offense', team: 'NE'})
   # api.get_player_stats({stats_type: 'offense', player_name: 'a.foster'})
   def get_player_stats(options)
     response = make_request("/players", options)
